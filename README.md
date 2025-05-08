@@ -11,14 +11,14 @@ A simple FastAPI-based microservice that uses TextBlob to perform sentiment anal
 - JSON-based input/output
 
 ## 📁 Project Structure
-
+```
 ml-feedback-api/
 ├── app/
-│ ├── main.py # FastAPI endpoints
-│ ├── model.py # Sentiment logic
-│ └── utils.py # Helper functions
-├── requirements.txt # Python dependencies
-
+│   ├── main.py       # FastAPI routes and application entry point
+│   ├── model.py      # Contains sentiment analysis logic (predict_sentiment function)
+│   └── utils.py      # Helper functions used across the app
+└── requirements.txt # List of Python dependencies needed to run the project
+```
 
 ---
 
@@ -46,6 +46,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 5. Visit: http://127.0.0.1:8000/docs
 6. Example Request
+```
 POST /predict
 Request Body:
 {
@@ -55,3 +56,4 @@ Response:
 {
   "sentiment": "positive"
 }
+```
